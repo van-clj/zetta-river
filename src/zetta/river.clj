@@ -24,7 +24,7 @@
 
 (defn- get-parser-result
   "Returns the result and the remainder value of the parser, when
-  the parser is a failure returns nil."
+  the parser is a failure the result value returned is nil."
   [parser]
   (cond
     (zetta/failure? parser) [nil (:remainder parser)]
@@ -38,7 +38,7 @@
 
 (defn parse
   "Consumer that receives a zetta parser and returns the parsed
-  result. In case the parser fails to match, it will return a nil
+  result. In case the parser fails to match, it will yield a nil
   value."
   [parser0]
   (let [
@@ -69,7 +69,7 @@
 
 (defn parse*
   "Filter that transforms a given input stream into results of the given
-  zetta-parser, this will use the parser consumer internally."
+  zetta-parser, this will use the zetta.river/parser consumer internally."
   [parser inner-consumer]
   (river/to-filter (parse parser) inner-consumer))
 
