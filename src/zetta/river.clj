@@ -57,8 +57,8 @@
                  :else
                    (let [[result remainder] (get-parser-result parser)]
                    (river/yield result
-                                (concat  remainder
-                                         stream)))))]
+                                (river/concat-stream remainder
+                                                     stream)))))]
     #(consumer (partial zetta/parse parser0) %)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -70,7 +70,7 @@
 (defn parse*
   "Filter that transforms a given input stream into results of the given
   zetta-parser, this will use the zetta.river/parser consumer internally."
-  [parser inner-consumer]
-  (river/to-filter (parse parser) inner-consumer))
+  [parser]
+  (river/to-filter (parse parser)))
 
 
