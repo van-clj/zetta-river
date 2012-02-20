@@ -1,4 +1,4 @@
-(ns zetta.river
+(ns river.zetta
 
   ^{
     :author "Roman Gonzalez"

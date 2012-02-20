@@ -1,4 +1,4 @@
-(ns zetta.test.river
+(ns river.test.zetta
   (:use clojure.test)
 
   (:require [river.core :as river]
@@ -7,9 +7,9 @@
             [zetta.parser.seq :as zp])
 
   (:use [river.seq :only (produce-seq mapcat* consume)]
+        [river.zetta]
         [zetta.combinators :only (sep-by)]
-        [zetta.parser.seq :only (number spaces)]
-        [zetta.river]))
+        [zetta.parser.seq :only (number spaces)]))
 
 
 (def numbers (sep-by number spaces))
