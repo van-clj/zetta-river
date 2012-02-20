@@ -1,4 +1,4 @@
-(defproject org.van-clj/zetta-river "0.0.2"
+(defproject org.van-clj/zetta-river "0.0.3-SNAPSHOT"
   :description "Integration between the river library and the
                 zetta-parser library"
   :author "Roman Gonzalez"
