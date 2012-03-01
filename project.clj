@@ -3,5 +3,5 @@
                 zetta-parser library"
   :author "Roman Gonzalez"
   :dependencies [[org.clojure/clojure "1.3.0"]
-                 [org.van-clj/river "0.1.0"]
-                 [org.van-clj/zetta-parser "0.0.2"]])
+                 [org.van-clj/river "0.1.1"]
+                 [org.van-clj/zetta-parser "0.0.3"]])
